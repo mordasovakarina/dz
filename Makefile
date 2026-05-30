@@ -1,15 +1,14 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -O2
-TARGET = test_bst
+TARGET = test_hashtable
 
 all: $(TARGET)
 
-$(TARGET): BST.o
-	$(CXX) $(CXXFLAGS) -o $(TARGET) BST.o -L. -lBSTTest
+$(TARGET): HashTable.o
+	$(CXX) $(CXXFLAGS) -o $(TARGET) HashTable.o -L. -lHashTest
 
-Bзякд
-ST.o: BST.cpp BST.h
-	$(CXX) $(CXXFLAGS) -c BST.cpp
+HashTable.o: HashTable.cpp HashTable.h
+	$(CXX) $(CXXFLAGS) -c HashTable.cpp
 
 run: $(TARGET)
 	./$(TARGET)
